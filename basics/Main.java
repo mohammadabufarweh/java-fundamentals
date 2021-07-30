@@ -4,7 +4,7 @@ public class Main {
     System.out.println(greeting);
 
     pluralize("nickName",5);
-       flipNHeads(5);
+       flipNHeads(4);
 
   }
    public static void pluralize ( String nickName ,int num ){

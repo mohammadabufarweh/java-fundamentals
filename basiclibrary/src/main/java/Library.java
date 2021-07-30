@@ -10,27 +10,29 @@ public class Library {
 //        roll(3);
 //        containsDuplicates();
 //        calculatingAverages();
-//        arraysOfArrays();
-        int[][] weeklyMonthTemperatures = {
-                {66, 64, 58, 65, 71, 57, 60},
-                {57, 65, 65, 70, 72, 65, 51},
-                {55, 54, 60, 53, 59, 57, 61},
-                {65, 56, 55, 52, 55, 62, 57}
-        };
-        maap(weeklyMonthTemperatures);
-        List<String> votes = new ArrayList<>();
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Shrub");
-        votes.add("Hedge");
-        votes.add("Shrub");
-        votes.add("Bush");
-        votes.add("Hedge");
-        votes.add("Bush");
+////        arraysOfArrays();
+//        int[][] weeklyMonthTemperatures = {
+//                {66, 64, 58, 65, 71, 57, 60},
+//                {57, 65, 65, 70, 72, 65, 51},
+//                {55, 54, 60, 53, 59, 57, 61},
+//                {65, 56, 55, 52, 55, 62, 57}
+//        };
+//        maap(weeklyMonthTemperatures);
+//        List<String> votes = new ArrayList<>();
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Shrub");
+//        votes.add("Hedge");
+//        votes.add("Shrub");
+//        votes.add("Bush");
+//        votes.add("Hedge");
+//        votes.add("Bush");
+//
+//        String winner = tally(votes);
+//        System.out.println(winner + " received the most votes!");
 
-        String winner = tally(votes);
-        System.out.println(winner + " received the most votes!");
+
     }
 
 
@@ -112,37 +114,39 @@ public class Library {
 //
 //
 //    }
-    public static void maap(int[][] weeklyMonthTemperatures){
+//    public static void maap(int[][] weeklyMonthTemperatures){
+//
+//        Set<int[][]> weeklyMonthTem = new HashSet<>();
+//        for(int i=0; i < 4; i++) {
+//            weeklyMonthTem.add(weeklyMonthTemperatures);
+//            }
+//
+//        for (int[] integer : weeklyMonthTemperatures) {
+//            System.out.println(Arrays.toString(integer));
+//                System.out.println(Arrays.stream(integer).max());
+//
+//        }
+//
+//    }
+//    public static String tally(List<String> vote){
+//        HashMap<String, Integer> vot = new HashMap<>();
+//        int count = 0;
+//        String name = "";
+//        for(String names : vote){
+//            vot.put(names, 0);
+//        }
+//        for(String names : vote){
+//            if(vot.get(names) > count){
+//                count = vot.get(names)+1;
+//                name = names;
+//            }
+//            else{
+//                vot.put(names,vot.get(names)+1);
+//            }
+//        }
+//        return name;
+//    }
 
-        Set<int[][]> weeklyMonthTem = new HashSet<>();
-        for(int i=0; i < 4; i++) {
-            weeklyMonthTem.add(weeklyMonthTemperatures);
-            }
 
-        for (int[] integer : weeklyMonthTemperatures) {
-            System.out.println(Arrays.toString(integer));
-                System.out.println(Arrays.stream(integer).max());
-
-        }
-
-    }
-    public static String tally(List<String> vote){
-        HashMap<String, Integer> vot = new HashMap<>();
-        int count = 0;
-        String name = "";
-        for(String names : vote){
-            vot.put(names, 0);
-        }
-        for(String names : vote){
-            if(vot.get(names) > count){
-                count = vot.get(names)+1;
-                name = names;
-            }
-            else{
-                vot.put(names,vot.get(names)+1);
-            }
-        }
-        return name;
-    }
 }
 
