@@ -11,13 +11,14 @@ public class Library {
 //        containsDuplicates();
 //        calculatingAverages();
 ////        arraysOfArrays();
-//        int[][] weeklyMonthTemperatures = {
-//                {66, 64, 58, 65, 71, 57, 60},
-//                {57, 65, 65, 70, 72, 65, 51},
-//                {55, 54, 60, 53, 59, 57, 61},
-//                {65, 56, 55, 52, 55, 62, 57}
-//        };
-//        maap(weeklyMonthTemperatures);
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+
+        System.out.println(weatherData(weeklyMonthTemperatures));
 //        List<String> votes = new ArrayList<>();
 //        votes.add("Bush");
 //        votes.add("Bush");
@@ -114,20 +115,37 @@ public class Library {
 //
 //
 //    }
-//    public static void maap(int[][] weeklyMonthTemperatures){
-//
-//        Set<int[][]> weeklyMonthTem = new HashSet<>();
-//        for(int i=0; i < 4; i++) {
-//            weeklyMonthTem.add(weeklyMonthTemperatures);
-//            }
-//
-//        for (int[] integer : weeklyMonthTemperatures) {
-//            System.out.println(Arrays.toString(integer));
-//                System.out.println(Arrays.stream(integer).max());
-//
-//        }
-//
-//    }
+    public static String weatherData(int[][] arr){
+        HashSet<Integer> uniqueTemp = new HashSet<>();
+        int maximum = arr[0][1];
+        int minimum = arr[0][0];
+        String returnData="";
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                uniqueTemp.add(arr[i][j]);
+                if(maximum< arr[i][j]){
+                    System.out.println(maximum);
+                    maximum = arr[i][j];
+                }
+                if(minimum> arr[i][j]){
+                    System.out.println(minimum);
+                    minimum = arr[i][j];
+                }
+            }
+        }
+
+        System.out.println( "High: " + maximum  );
+        System.out.println("Low: " + minimum );
+
+        for (int i = minimum; i < maximum; i++) {
+            if(!uniqueTemp.contains(i)){
+                returnData = returnData +"Never saw temperature: " + i ;
+            }
+        }
+        return returnData;
+
+
+    }
 //    public static String tally(List<String> vote){
 //        HashMap<String, Integer> vot = new HashMap<>();
 //        int count = 0;
