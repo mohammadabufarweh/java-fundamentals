@@ -5,6 +5,9 @@ public class Review {
     private String auth;
     public int star;
     public Restaurant restaurant;
+    public Shop shop;
+    public Theater theater;
+    public AddReviwe addReviwe;
 
     public Review(String body, String auth, int star) {
         this.body = body;
