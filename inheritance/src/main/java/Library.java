@@ -12,19 +12,32 @@ public class Library {
 //        System.out.println(revv);
 
         Restaurant r = new Restaurant("shawerma",2,1);
-
+        Shop s= new Shop("zara","T-shirt",4);
+        Theater t =new Theater("petra");
 //        System.out.println(r.toString());
 
-        Review re = new Review("the restaurant is excellent","Mhammad", 5);
-        Review ree = new Review("the restaurant is bad","Khaled", 1);
-        Review reee = new Review("the restaurant is bad","Sameer", 1);
+//        Review re = new Review("the restaurant is excellent","Mhammad", 5);
+//        Review ree = new Review("the restaurant is bad","Khaled", 3);
+//        Review reee = new Review("the restaurant is bad","Khaled", 3);
 //        System.out.println(re);
+        Review shopone=new Review("jojo","lolo",4);
+        Review shopTwo=new Review("jo","lolo",3);
+        Review shopThree=new Review("joi","lolo",2);
 
-        r.addReview(re);
-        r.addReview(ree);
-        r.addReview(reee);
+        r.addReview("the restaurant is excellent","Mhammad", 5);
+        r.addReview("the restaurant is bad","Khaled", 3);
+        r.addReview("the restaurant is bad","Khaled", 3);
         System.out.println(r);
-
+        System.out.println("-----------------------------");
+        s.addReview("jojo","lolo",1);
+        s.addReview("jo","lolo",1);
+        s.addReview("joi","lolo",1);
+        System.out.println(s);
+        System.out.println("-----------------------------");
+        t.addReview("rami","lolo",2);
+        t.addReview("samer","lolo",5);
+        t.addReview("jameel","lolo",5);
+        System.out.println(t);
     }
 
 }
