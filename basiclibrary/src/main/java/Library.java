@@ -12,11 +12,17 @@ public class Library {
         System.out.println(greeting);
         System.out.println("lab 02 --------------------------------");
 
-      int [] arr={1,1,3,4,5};
+      int [] arr={1,2,3,4,5};
         roll(3);
         System.out.println(containsDuplicates(arr));
         calculatingAverages((arr));
-        arraysOfArrays();
+        int array [][]={
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        arraysOfArrays(array);
 
 
         System.out.println("lab 03 --------------------------------");
@@ -77,31 +83,30 @@ public class Library {
 
         int x = 0;
         for (int i = 0; i < arr.length; i++) {
-            x ++;
+            x = x+arr[i];
         }
         System.out.println("avg  " + x / arr.length);
     }
 
-    public static void arraysOfArrays() {
-            ArrayList<ArrayList<Integer>> mainArray = new ArrayList<>();
-            for(int i=0; i < 4; i++) {
-                mainArray.add(new ArrayList());
-            }
-            for (int k = 0; k < 4; k++) {
-                for (int i = 0; i < 10; i++) {
-                    mainArray.get(k).add(getRandomNumberInRange(1, 10));
-                }
-            }
-                System.out.println(mainArray);
-            float x = 0;
-        for (int z = 0; z <4; z++) {
-            for (int i = 0; i < 10; i++) {
-                x = x + mainArray.get(z).get(i);
-            }
-            System.out.println("avg  " +  (x / 10));
-            x=0;
-        }
+    public static void arraysOfArrays(int array [][]) {
 
+            float y =0;
+            float x = 0;
+            float u=0;
+            float lowestAvg=0;
+        for (int z = 0; z <array.length; z++) {
+            for (int i = 0; i < array[z].length; i++) {
+                x = x + array[z][i];
+            }
+            System.out.println("avg  " +  (y= x / array[z].length));
+            x=0;
+
+            if (u<y){
+                lowestAvg= u;
+            }
+             u=y;
+        }
+        System.out.println("lowestAvg"+lowestAvg);
 
 
     }
