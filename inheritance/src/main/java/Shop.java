@@ -51,7 +51,6 @@ public void addReview(String body, String auth, int star){
             total += reviews.get(i).star;
         }
         total /= reviews.size();
-        System.out.println( "this.reviweForShops"+this.reviweForShops);
         this.reviweForShops = total;
 
     }

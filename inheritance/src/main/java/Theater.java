@@ -7,11 +7,9 @@ public class Theater implements AddReviwe{
     private String name;
     private String nameForTheater;
     private int reviweForTheater;
-    ArrayList<Theater> reviews = new ArrayList<>();
+    ArrayList<Review> reviews = new ArrayList<>();
+    ArrayList<Movie>movies=new ArrayList<>();
 
-    public void movie(String name){
-    this.name=name;
-    }
     public Theater(String nameForTheater){
         this.nameForTheater=nameForTheater;
 
@@ -23,10 +21,11 @@ public class Theater implements AddReviwe{
         this.star=star;
 
     }
-
-
+    public void addFavouritMovies(Movie movie) {
+        movies.add(movie);
+    }
     public void addReview(String body, String auth, int star){
-        Theater reviewTheater=new Theater(body ,auth,star);
+        Review reviewTheater=new Review(body ,auth,star);
         reviews.add(reviewTheater);
         updateReviw();
     }
@@ -36,17 +35,22 @@ public class Theater implements AddReviwe{
             total += reviews.get(i).star;
         }
         total /= reviews.size();
-        System.out.println( "this.reviweForShops"+this.reviweForTheater);
         this.reviweForTheater = total;
 
     }
-
+    public void removeMovie(Movie movie) {
+        if(movies.contains(movie))
+            movies.remove(movie);
+    }
     @Override
     public String toString() {
         return "Theater{" +
-                ", nameForTheater='" + nameForTheater + '\'' +
+                " nameForTheater='" + nameForTheater + '\'' +
                 ", reviweForTheater=" + reviweForTheater +
-                ", reviews=" + reviews +
+                  reviews +
+                ", movies=" + movies +
                 '}';
     }
+
+
 }
