@@ -14,6 +14,9 @@ public class Library {
         Restaurant r = new Restaurant("shawerma",2,1);
         Shop s= new Shop("zara","T-shirt",4);
         Theater t =new Theater("petra");
+        Movie m1=new Movie("oioi");
+        Movie m2=new Movie("oioi");
+        Movie m3=new Movie("oioi");
 //        System.out.println(r.toString());
 
 //        Review re = new Review("the restaurant is excellent","Mhammad", 5);
@@ -22,7 +25,7 @@ public class Library {
 //        System.out.println(re);
         Review shopone=new Review("jojo","lolo",4);
         Review shopTwo=new Review("jo","lolo",3);
-        Review shopThree=new Review("joi","lolo",2);
+        Review shopThree=new Review("hussam","yaseen",2);
 
         r.addReview("the restaurant is excellent","Mhammad", 5);
         r.addReview("the restaurant is bad","Khaled", 3);
@@ -34,9 +37,13 @@ public class Library {
         s.addReview("joi","lolo",1);
         System.out.println(s);
         System.out.println("-----------------------------");
-        t.addReview("rami","lolo",2);
-        t.addReview("samer","lolo",5);
-        t.addReview("jameel","lolo",5);
+        t.addFavouritMovies(m1);
+        t.addFavouritMovies(m2);
+        t.addFavouritMovies(m3);
+        t.addReview("rami","kmal",5);
+        t.addReview("samer","tala",3);
+        t.addReview("jameel","hala",1);
+//        t.removeMovie(m);
         System.out.println(t);
     }
 
